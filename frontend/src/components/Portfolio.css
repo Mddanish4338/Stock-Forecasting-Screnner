@@ -1,0 +1,368 @@
+/* Portfolio.css */
+.portfolio-container {
+    background: var(--background);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    padding: 2rem;
+    margin-top: 100px;
+  }
+  
+  .portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: var(--border-color);
+  }
+  
+  .portfolio-title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .portfolio-empty {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    margin-top: 1rem;
+  }
+  
+  .stock-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+  }
+  
+  .stock-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .stock-summary:hover {
+    background-color: var(--hover-bg);
+  }
+  
+  .stock-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .stock-symbol-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: var(--symbol-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--symbol-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .stock-name {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .stock-symbol {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+  }
+  
+  .stock-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .stock-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+  
+  .stock-change {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .stock-change.positive {
+    color: var(--positive);
+  }
+  
+  .stock-change.negative {
+    color: var(--negative);
+  }
+  
+  .stock-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+    opacity: 1;
+  }
+  
+  .stock-button:hover {
+    opacity: 0.9;
+  }
+  
+  .stock-button.remove {
+    background-color: var(--negative);
+  }
+  
+  .stock-details {
+    padding: 1rem;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stat-card {
+    background: var(--stat-bg);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .stat-label {
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .stat-value {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .chart-container {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .strategy-card {
+    background: var(--strategy-bg);
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 2px dashed var(--primary);
+  }
+  
+  .strategy-title {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    color: var(--primary);
+  }
+  
+  .performance-card {
+    background: var(--card-bg);
+    padding: 1.25rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .performance-title {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .performance-change {
+    margin: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  .performance-change.positive {
+    color: var(--positive);
+  }
+  
+  .performance-change.negative {
+    color: var(--negative);
+  }
+  
+  .performance-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .performance-stat-label {
+    margin: 0.25rem 0;
+    color: var(--secondary-text);
+    font-size: 0.9rem;
+  }
+  
+  .performance-stat-value {
+    margin: 0.25rem 0;
+    font-weight: 600;
+  }
+  
+  /* Media Queries */
+  @media (min-width: 1440px) {
+    .portfolio-container {
+      max-width: 1400px;
+      margin: 100px auto 0;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .portfolio-container {
+      padding: 1.75rem;
+      margin-top: 90px;
+    }
+    
+    .stock-button {
+      padding: 0.3rem 0.65rem;
+      font-size: 0.85rem;
+    }
+    
+    .chart-container {
+      height: 220px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-container {
+      padding: 1.5rem;
+      margin-top: 80px;
+    }
+    
+    .portfolio-header {
+      margin-bottom: 1.5rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .stock-summary {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    
+    .stock-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .stats-grid {
+      gap: 1.25rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .portfolio-container {
+      padding: 1.25rem;
+      margin-top: 70px;
+    }
+    
+    .portfolio-empty {
+      padding: 1.5rem;
+    }
+    
+    .stock-card {
+      padding: 0.8rem;
+      border-radius: 10px;
+    }
+    
+    .stock-summary {
+      padding: 0.6rem;
+      gap: 0.5rem;
+    }
+    
+    .stock-info {
+      gap: 0.5rem;
+    }
+    
+    .stock-symbol-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 0.9rem;
+    }
+    
+    .stock-name {
+      font-size: 0.95rem;
+    }
+    
+    .stock-symbol {
+      font-size: 0.8rem;
+    }
+    
+    .stock-price {
+      font-size: 0.95rem;
+    }
+    
+    .stock-button {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+    }
+    
+    .chart-container {
+      height: 200px;
+      margin-bottom: 1.25rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .performance-stats {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .portfolio-container {
+      padding: 1rem;
+      margin-top: 60px;
+    }
+    
+    .stock-card {
+      padding: 0.7rem;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+    
+    .stock-button {
+      padding: 0.2rem 0.4rem;
+      font-size: 0.75rem;
+    }
+  }

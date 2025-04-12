@@ -1,0 +1,404 @@
+.container {
+  padding: 20px;
+  background-color: #f7fafc;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.container.dark {
+  background-color: #1a202c;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.darkHeader {
+  background-color: #2d3748;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.backButton {
+  background-color: #edf2f7;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.darkBackButton {
+  background-color: #4a5568;
+  color: #ffffff;
+}
+
+.backButton:hover {
+  background-color: #e2e8f0;
+}
+
+.darkBackButton:hover {
+  background-color: #718096;
+}
+
+.title {
+  font-size: 24px;
+  margin: 0;
+  color: #2d3748;
+}
+
+.dark .title {
+  color: #ffffff;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 28px;
+  margin: 0;
+  color: #2d3748;
+}
+
+.dark .price {
+  color: #ffffff;
+}
+
+.changePositive {
+  color: #48bb78;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.changeNegative {
+  color: #f56565;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.error {
+  background-color: #fff5f5;
+  color: #c53030;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.darkError {
+  background-color: #742a2a;
+  color: #fed7d7;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.darkCard {
+  background-color: #2d3748;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  cursor: pointer;
+  background-color: #f7fafc;
+  transition: all 0.2s ease;
+}
+
+.darkSummary {
+  background-color: #4a5568;
+}
+
+.summary:hover {
+  background-color: #edf2f7;
+}
+
+.darkSummary:hover {
+  background-color: #718096;
+}
+
+.summaryLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.symbolBox {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #4299e1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.darkSymbolBox {
+  background-color: #3182ce;
+}
+
+.stockName {
+  margin: 0;
+  font-size: 18px;
+  color: #2d3748;
+}
+
+.dark .stockName {
+  color: #ffffff;
+}
+
+.stockSymbol {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.summaryRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.predictButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.darkPredictButton {
+  background-color: #3182ce;
+}
+
+.predictButton:hover {
+  background-color: #3182ce;
+}
+
+.predictButton:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.details {
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.darkDetails {
+  background-color: #2d3748;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.statCard {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f7fafc;
+}
+
+.darkStatCard {
+  background-color: #4a5568;
+}
+
+.statLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px 0;
+  color: #4a5568;
+  font-size: 14px;
+}
+
+.dark .statLabel {
+  color: #e2e8f0;
+}
+
+.statIcon {
+  color: #718096;
+}
+
+.statValue {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.dark .statValue {
+  color: #ffffff;
+}
+
+.chartContainer {
+  margin-bottom: 24px;
+  height: 300px;
+}
+
+.strategyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+}
+
+.strategyCard {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ebf8ff;
+  border: 1px dashed #4299e1;
+}
+
+.darkStrategyCard {
+  background-color: #2a4365;
+  border-color: #3182ce;
+}
+
+.strategyTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px 0;
+  color: #2b6cb0;
+}
+
+.dark .strategyTitle {
+  color: #90cdf4;
+}
+
+.strategyIcon {
+  color: #4299e1;
+}
+
+.strategyContent {
+  line-height: 1.6;
+}
+
+.strategyProfit {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #bee3f8;
+}
+
+.dark .strategyProfit {
+  border-top-color: #2c5282;
+}
+
+.noStrategy {
+  color: #718096;
+  margin: 0;
+}
+
+.performanceCard {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.darkPerformanceCard {
+  background-color: #4a5568;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.performanceTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px 0;
+  color: #2d3748;
+}
+
+.dark .performanceTitle {
+  color: #ffffff;
+}
+
+.performanceIcon {
+  color: #48bb78;
+}
+
+.performanceContent {
+  line-height: 1.6;
+}
+
+.performanceText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 16px 0;
+}
+
+.performanceStats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.performanceStat {
+  margin-bottom: 8px;
+}
+
+.performanceStatLabel {
+  margin: 0 0 4px 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.performanceStatValue {
+  margin: 0;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+.dark .performanceStatValue {
+  color: #ffffff;
+}
+
+.noPerformance {
+  color: #718096;
+  margin: 0;
+}
+
+/* Animation for loading state */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
