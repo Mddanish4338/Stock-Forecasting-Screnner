@@ -13,12 +13,14 @@ export default function Home({ darkMode }) {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/indices')
+    // axios.get('http://localhost:5000/api/indices')
+    axios.get('https://backend-qb53.onrender.com/api/indices')
       .then(res => setIndices(res.data))
       .catch(err => console.error(err))
       .finally(() => setIndicesLoading(false));
 
-    axios.get('http://localhost:5000/api/top-stocks')
+    // axios.get('http://localhost:5000/api/top-stocks')
+    axios.get('https://backend-qb53.onrender.com/api/top-stocks')
       .then(res => {
         setTopGainers(res.data.gainers);
         setTopLosers(res.data.losers);

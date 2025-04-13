@@ -3674,7 +3674,8 @@ const Portfolio = ({ darkMode }) => {
   const handlePredict = async (symbol) => {
     setLoading((prev) => ({ ...prev, [symbol]: true }));
     try {
-      const response = await axios.post('http://localhost:5000/api/predict', { symbol });
+      // const response = await axios.post('http://localhost:5000/api/predict', { symbol });
+      const response = await axios.post('https://backend-qb53.onrender.com/api/predict', { symbol });
       await setDoc(doc(db, 'predictions', symbol), {
         ...response.data,
         predictedAt: serverTimestamp(),

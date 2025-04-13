@@ -8,14 +8,16 @@ const SearchBar = ({ onAdd, darkMode }) => {
   const [results, setResults] = useState([]);
 
   const handleSearch = () => {
-    axios.get(`http://localhost:5000/api/search?query=${query}`)
+    // axios.get(`http://localhost:5000/api/search?query=${query}`)
+    axios.get(`https://backend-qb53.onrender.com/api/search?query=${query}`)
       .then(response => setResults(response.data))
       .catch(error => console.error("Search Error:", error));
   };
 
   const handleAdd = async (stock) => {
     try {
-      await axios.post('http://localhost:5000/api/predict', { symbol: stock.symbol });
+      // await axios.post('http://localhost:5000/api/predict', { symbol: stock.symbol });
+      await axios.post('https://backend-qb53.onrender.com/api/predict', { symbol: stock.symbol });
       onAdd && onAdd(stock);
     } catch (error) {
       console.error("Prediction Error:", error);

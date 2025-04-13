@@ -19,7 +19,8 @@ export default function IndexDetails() {
   const [chartData, setChartData] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/index-details?symbol=${symbol}`)
+    // axios.get(`http://localhost:5000/api/index-details?symbol=${symbol}`)
+    axios.get(`https://backend-qb53.onrender.com/api/index-details?symbol=${symbol}`)
       .then(res => {
         setDetails(res.data.details);
         setChartData({

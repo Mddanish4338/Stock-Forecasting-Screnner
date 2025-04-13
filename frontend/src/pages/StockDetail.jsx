@@ -710,7 +710,8 @@ export default function StockDetail({ darkMode }) {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/indices')
+    // axios.get('http://localhost:5000/api/indices')
+    axios.get('https://backend-qb53.onrender.com/api/indices')
       .then(res => {
         setIndices(res.data);
         setLoading(false);
@@ -764,11 +765,13 @@ export default function StockDetail({ darkMode }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:5000/api/stocks/${stock.symbol}`);
+      // const response = await axios.get(`http://localhost:5000/api/stocks/${stock.symbol}`);
+      const response = await axios.get(`https://backend-qb53.onrender.com/api/stocks/${stock.symbol}`);
       setStock(prev => ({ ...prev, ...response.data }));
       
       try {
-        const predictionRes = await axios.get(`http://localhost:5000/api/stocks/${stock.symbol}/predict`);
+        // const predictionRes = await axios.get(`http://localhost:5000/api/stocks/${stock.symbol}/predict`);
+        const predictionRes = await axios.get(`https://backend-qb53.onrender.com/api/stocks/${stock.symbol}/predict`);
         setPrediction(predictionRes.data);
       } catch (predictionError) {
         console.log('Prediction not available yet');
@@ -796,7 +799,8 @@ export default function StockDetail({ darkMode }) {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.post(`http://localhost:5000/api/stocks/${stock.symbol}/predict`);
+      // const response = await axios.post(`http://localhost:5000/api/stocks/${stock.symbol}/predict`);
+      const response = await axios.post(`https://backend-qb53.onrender.com/api/stocks/${stock.symbol}/predict`);
       setPrediction(response.data);
     } catch (error) {
       console.error('Prediction error:', error);

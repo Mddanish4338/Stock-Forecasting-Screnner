@@ -6,7 +6,8 @@ const IndicesCards = () => {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/indices')
+    // axios.get('http://localhost:5000/api/indices')
+    axios.get('https://backend-qb53.onrender.com/api/indices')
       .then(response => setIndices(response.data))
       .catch(err => console.error("Failed to fetch indices", err));
   }, []);
